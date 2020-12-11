@@ -13,25 +13,25 @@ excerpt: >
 feature_row:
   - image_path: /assets/images/mm-customizable-feature.png
     alt: "customizable"
-    title: "Super customizable"
-    excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
-    url: "/docs/configuration/"
+    title: "Project Summary"
+    excerpt: "Project Overview, methodology, results, and discussion"
+    url: "/Overview/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: /assets/images/mm-responsive-feature.png
     alt: "fully responsive"
-    title: "Responsive layouts"
-    excerpt: "Built with HTML5 + CSS3. All layouts are fully responsive with helpers to augment your content."
-    url: "/docs/layouts/"
+    title: "Submitted Materials"
+    excerpt: "Compilation of all materials for the project, including the proposal, midterm report, and presentation."
+    url: "/presentation/"
     btn_class: "btn--primary"
-    btn_label: "Learn more"
+    btn_label: "Click Here"
   - image_path: /assets/images/mm-free-feature.png
     alt: "100% free"
-    title: "100% free"
-    excerpt: "Free to use however you want under the MIT License. Clone it, fork it, customize it... whatever!"
-    url: "/docs/license/"
+    title: "Code"
+    excerpt: "Github repository of our code."
+    url: "/projectCode/"
     btn_class: "btn--primary"
-    btn_label: "Learn more"      
+    btn_label: "Click Here"      
 ---
 
 {% include feature_row %}
