@@ -28,7 +28,7 @@ We simulate an LDR CMOS image and HDR SPAD image from a ground truth image. We u
 
 
 <figure>
-  <img src="https://assets/images/unsplash-image-10.jpg" alt="this is a placeholder image">
+  <img src="/CS639Project/assets/images/unsplash-image-10.jpg" alt="this is a placeholder image">
   <figcaption>This is a figure caption.</figcaption>
 </figure>
 
