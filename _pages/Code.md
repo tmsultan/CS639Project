@@ -4,9 +4,9 @@ title: Project Code
 permalink: /projectCode/
 ---
 
-Comment: Update these links: load pdfs to some server and relink
+You can find links to code here:
 
-[Fusion Code](https://github.com/Way-Yuhao/Single-Photon-Camera-Guided-HDR-Imaging)
+[Fusion Code](https://github.com/Way-Yuhao/SPAD-Guided-HDR)
 
 [EDSR Code](https://github.com/Way-Yuhao/Single-Photon-Camera-Guided-HDR-Imaging)
 
