@@ -4,7 +4,7 @@ permalink: /
 hidden: true
 header:
   overlay_color: "#5e616c"
-  overlay_image: /CS639Project/assets/images_project/FusionVsCMOS.gif
+  overlay_image: < img = "/CS639Project/assets/images_project/FusionVsCMOS.gif">
   actions:
     - label: "<i class='fas fa-arrow-right'></i> Code Here"
       url: "/projectCode/"
