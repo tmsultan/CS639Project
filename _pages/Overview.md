@@ -20,7 +20,7 @@ Complementary metal–oxide–semiconductor (CMOS) sensors are the current indus
 Single-Photon-Avalanche Diode (SPAD)  32-bit image from a Suign -->
 
 
-High Dynamic Range (HDR) imaging is widely used to extend the range of intensity values of an image. Single-photon avalanche diodes (SPADs), when ran passively, are able to capture 2D intensity images with extremely high dynamic range, ideally spanning a range of 106:1 [1]. We propose a single-photon guided high dynamic range imaging pipeline that augments the dynamic range of a conventional sensor. We intend to show that an intensity map guided HDR neural network [2] can take a low-spatial-resolution, high-dynamic-range SPAD image and a high-spatial-resolution, limited-dynamic-range image from a conventional sensor, and construct a high-quality HDR image as output.   
+High Dynamic Range (HDR) imaging is widely used to extend the range of intensity values of an image. Single-photon avalanche diodes (SPADs), when ran passively, are able to capture 2D intensity images with extremely high dynamic range, ideally spanning a range of 106:1 [1]. We propose a single-photon guided high dynamic range imaging pipeline that augments the dynamic range of a conventional CMOS sensor. We intend to show that an intensity map guided HDR neural network [2] can take a low-spatial-resolution, high-dynamic-range SPAD image and a high-spatial-resolution, limited-dynamic-range image from a conventional sensor, and construct a high-quality HDR image as output.   
 
 # Solution Approach 
 
@@ -97,7 +97,7 @@ We attempted to use a deep learning based super-resolution method called EDSR [6
 
 <figure>
   <img src="/CS639Project/assets/images_project/EDSROutput.gif" alt="this is a placeholder image">
-  <figcaption>Comparison of Interpolation Methods.</figcaption>
+  <figcaption>Figure 5: Comparison of Interpolation Methods.</figcaption>
 </figure>
 
 As seen in the image, EDSR seems to create aritifacts near saturated regions, while qualitatively improving upon image quality in other regions. We believe that these artifacts occur because EDSR is pre-trained on LDR images and does not know how to interpolate correctly for extremely high pixel values. Since these are the very regions where the upsampled SPAD image would be most useful, we decided against fusing this with our CMOS image. 
@@ -121,8 +121,13 @@ Table 1: Comparison of Mean and Median SSIM Values
 
 # Lessons Learned, Future Work
 
-The quantitative results are in line with our expectations as gauged from the qualitative analysis. Exposure bracketing performs the best followed by our fusion method, and lastly followed by ExpandNet. Though exposure bracketing performs better on these 50 images, we would like to assess how these methods compare when we replace bilinear interpolation with a state-of-the-art super-resolution method. This is the next step for us.  Additionally, we foresee that a future version of our method could be useful for creating HDR videos of moving scenes, since the high temporal resolution of SPADs (on the order of ns - ps) makes it robust to motion blur. 
+The quantitative results are in line with our expectations as gauged from the qualitative analysis. Exposure bracketing performs the best followed by our fusion method, and lastly followed by ExpandNet. Though exposure bracketing performs better on these 50 images, we would like to assess how these methods compare when we replace bilinear interpolation with a state-of-the-art super-resolution method. This is the next step for us. To this end we plan to either retrain the EDSR network with additional HDR images (that we can simulate using our existing pipeline) or use an alternate super-resolution method. 
 
+ Furthermore, the work completed by Han et.al [2] provides a comprehensive framework for future direction, since they attempt to solve a similar problem with a different sensor (event camera). Therefore, one step we would like to try in the future would be to build implement a U-Net based nueral network which takes care of both super-resolution and image fusion. 
+
+We suspect that exposure bracketing with more than 2 images will produce quality images that outperform our method which utilizes two images. However, we foresee that a future version of our method could be useful for creating HDR videos of moving scenes, since the high temporal resolution of SPADs (on the order of ns - ps) makes it robust to motion blur.
+
+We learned how to implement and modify existing nueral networks using pytorch code to suit our needs. We also learned how to develop image processing pipelines that work with an arbitray number of images.
 
 # References
 1. A. Ingle, A. Velten, and M. Gupta, “High Flux Passive Imaging With Single-Photon Sensors,” in 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), Long Beach, CA, USA, Jun. 2019, pp. 6753–6762, doi:10.1109/CVPR.2019.00692.
