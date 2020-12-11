@@ -121,14 +121,13 @@ Table 1: Comparison of Mean and Median SSIM Values
 
 # Lessons Learned, Future Work
 
-The quantitative results are in line with our expectations as gauged from the qualitative analysis. Exposure bracketing performs the best followed by our fusion method, and lastly followed by ExpandNet. Though exposure bracketing performs better on these 50 images, we would like how these methods compare when we update our fusion method with a better upsampling method. Additionally, we foresee that a future version of our method could be useful for creating HDR videos of moving scenes, since the high temporal resolution of SPADs (on the order of ns - ps) makes it robust to motion blur. 
-
+The quantitative results are in line with our expectations as gauged from the qualitative analysis. Exposure bracketing performs the best followed by our fusion method, and lastly followed by ExpandNet. Though exposure bracketing performs better on these 50 images, we would like to assess how these methods compare when we replace bilinear interpolation with a state-of-the-art super-resolution method. This is the next step for us.  Additionally, we foresee that a future version of our method could be useful for creating HDR videos of moving scenes, since the high temporal resolution of SPADs (on the order of ns - ps) makes it robust to motion blur. 
 
 
 # References
-[1] A. Ingle, A. Velten, and M. Gupta, “High Flux Passive Imaging With Single-Photon Sensors,” in 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), Long Beach, CA, USA, Jun. 2019, pp. 6753–6762, doi:10.1109/CVPR.2019.00692.
-[2] J. Han et al., “Neuromorphic Camera Guided High Dynamic Range Imaging,” in 2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), Seattle, WA, USA, Jun. 2020, pp. 1727–1736, doi: 10.1109/CVPR42600.2020.00180.
-[3] P. E. Debevec and J. Malik, “Recovering High Dynamic Range Radiance Maps from Photographs,” p. 10.
-[4] D. Marnerides, T. Bashford-Rogers, J. Hatchett, and K. Debattista, “ExpandNet: A Deep Convolutional Neural Network for High Dynamic Range Expansion from Low Dynamic Range Content,” Computer Graphics Forum, vol. 37, no. 2, pp. 37–49, May 2018, doi: 10.1111/cgf.13340.
-[5] Zhou, W., A. C. Bovik, H. R. Sheikh, and E. P. Simoncelli. "Image Qualifty Assessment: From Error Visibility to Structural Similarity." IEEE Transactions on Image Processing. Vol. 13, Issue 4, April 2004, pp. 600–612.
-[6] B. Lim, S. Son, H. Kim, S. Nah, and K. M. Lee, “Enhanced Deep Residual Networks for Single Image Super-Resolution,” in 2017 IEEE Conference on Computer Vision and Pattern Recognition Workshops (CVPRW), Jul. 2017, pp. 1132–1140, doi: 10.1109/CVPRW.2017.151.
+1. A. Ingle, A. Velten, and M. Gupta, “High Flux Passive Imaging With Single-Photon Sensors,” in 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), Long Beach, CA, USA, Jun. 2019, pp. 6753–6762, doi:10.1109/CVPR.2019.00692.
+2. J. Han et al., “Neuromorphic Camera Guided High Dynamic Range Imaging,” in 2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), Seattle, WA, USA, Jun. 2020, pp. 1727–1736, doi: 10.1109/CVPR42600.2020.00180.
+3. P. E. Debevec and J. Malik, “Recovering High Dynamic Range Radiance Maps from Photographs,” p. 10.
+4. D. Marnerides, T. Bashford-Rogers, J. Hatchett, and K. Debattista, “ExpandNet: A Deep Convolutional Neural Network for High Dynamic Range Expansion from Low Dynamic Range Content,” Computer Graphics Forum, vol. 37, no. 2, pp. 37–49, May 2018, doi: 10.1111/cgf.13340.
+5. Zhou, W., A. C. Bovik, H. R. Sheikh, and E. P. Simoncelli. "Image Qualifty Assessment: From Error Visibility to Structural Similarity." IEEE Transactions on Image Processing. Vol. 13, Issue 4, April 2004, pp. 600–612.
+6. B. Lim, S. Son, H. Kim, S. Nah, and K. M. Lee, “Enhanced Deep Residual Networks for Single Image Super-Resolution,” in 2017 IEEE Conference on Computer Vision and Pattern Recognition Workshops (CVPRW), Jul. 2017, pp. 1132–1140, doi: 10.1109/CVPRW.2017.151.
